@@ -1,0 +1,29 @@
+name: WorkHours
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  WorkHours:
+    type: application
+    platform: iOS
+    sources: [WorkHours]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.workhours
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Work Hours
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIUserInterfaceStyle: Dark
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.9"
+  WorkHoursTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [WorkHoursTests]
+    dependencies:
+      - target: WorkHours
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "5.9"
